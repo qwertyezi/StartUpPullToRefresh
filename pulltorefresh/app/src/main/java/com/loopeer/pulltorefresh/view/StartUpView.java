@@ -133,7 +133,7 @@ public class StartUpView extends View {
         mRunnable = new Runnable() {
             @Override
             public void run() {
-                mHandler.postDelayed(this, 300);
+                mHandler.postDelayed(this, 250);
                 index = ++index >= tColor.length ? 0 : index;
                 postInvalidate();
             }

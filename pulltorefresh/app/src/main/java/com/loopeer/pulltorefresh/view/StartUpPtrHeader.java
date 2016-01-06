@@ -60,6 +60,6 @@ public class StartUpPtrHeader extends FrameLayout implements PtrUIHandler {
     @Override
     public void onUIPositionChange(PtrFrameLayout frame, boolean isUnderTouch, byte status, PtrIndicator ptrIndicator) {
         float factor = (float) 45 / mHeight;
-        mHeader.rotate(ptrIndicator.getCurrentPosY() * factor);
+        mHeader.rotate(ptrIndicator.getCurrentPosY() * factor > 45 ? 45 : ptrIndicator.getCurrentPosY() * factor);
     }
 }
